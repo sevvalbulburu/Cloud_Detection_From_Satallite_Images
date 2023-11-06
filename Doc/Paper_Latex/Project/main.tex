@@ -1,0 +1,75 @@
+%%%%% Güncelleme Geçmişi
+%%%%% v3.4 -> 06.06.2020 (AEL)
+%%%%% v3.3 -> 03.06.2020 (HOI)
+%%%%% v3.2 -> 29.05.2019 (HOI)
+%%%%% v3.1 -> 22.05.2019 (IOS)
+%%%%% v3.0 -> 06.11.2018 (IOS)
+%%%%% v2.0 -> 01.03.2017 (IOS)
+%%%%% v1.2 -> 20.12.2016 (IOS)
+%%%%% v1.1 -> 10.11.2016 (IOS)
+
+\documentclass[a4paper,12pt,oneside,openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%      PROJECT PARAMETERS      %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Project Option: "computer" or "senior"
+% Report Option: "report" or "final"
+
+% Example:   \usepackage[computer, report]{ytucestyle}
+%            \usepackage[senior, final]{ytucestyle}
+
+\usepackage[computer, final]{ytucestyle}
+
+
+\usepackage{minted}
+\usepackage{tikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%         REFERENCES       %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{references.bib} 
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%         FRONT PAGES      %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input {frontPages.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%      CHAPTERS     %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input {projectChapters/1-chapter.tex}
+\input {projectChapters/2-chapter.tex}
+\input {projectChapters/3-chapter.tex}
+\input {projectChapters/4-chapter.tex}
+\input {projectChapters/5-chapter.tex}
+\input {projectChapters/6-chapter.tex}
+\input {projectChapters/7-chapter.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%      APPENDICES     %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage\appendix
+
+%\input {projectChapters/A-appendix.tex}
+%\input {projectChapters/B-appendix.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%         BACK PAGES       %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{chapter}{\bibName}
+\singlespacing
+\printbibliography[title={\bibName}]
+
+\ifnum\final=1
+\newpage
+\addcontentsline{toc}{chapter}{\cvName}
+\input {cv.tex}
+\fi
+
+\end{document}

@@ -1,0 +1,10 @@
+pip==23.0.1
+matplotlib==3.7.1
+scikit-image==0.19.3
+tensorflow==2.10
+pandas==1.5.3
+Pillow==8.4.0
+numpy==1.22.4
+tqdm==4.65.0
+hub==3.0.1
+glob2==0.7
